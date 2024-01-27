@@ -1,5 +1,5 @@
 import { combineFiles } from './modules/combineFiles.js';
-import { greyAndBlur, resizeImage } from './modules/sharpImages.js';
+import { grayscaleAndBlurImage, resizeImage } from './modules/sharpImages.js';
 
 // Путь до каталога
 const srcDirPath = './test';
@@ -22,7 +22,7 @@ const app = async () => {
 const resizeImages = async () => {
   try {
     await resizeImage(inputImage, outputResizedImage);
-    await greyAndBlur(inputImage, outputGrayscaleImage);
+    await grayscaleAndBlurImage(inputImage, outputGrayscaleImage);
   } catch (error) {
     console.error(error);
   }
